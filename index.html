@@ -33,6 +33,9 @@
                     <div class="col-md-4 cheese-information mb-4">
                         <div class="cheese-stats">
                             <h1 class="d-flex justify-content-center text-warning">Mining Stats</h1>
+                            <p class="d-flex justify-content-center text-warning mt-3">Total Cheese Mined: <span
+                                    class="text-light ml-3" id="cheeseMineTotal">0</span>
+                            </p>
                             <p class="d-flex justify-content-center text-warning mt-3">CPS (Cheese Per Second): <span
                                     class="text-light ml-3" id="cheesePerSecond">0</span>
                             </p>
@@ -43,7 +46,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="cheese" id="cheese"></div>
+                        <div class="cheese" id="cheese" onclick="mineCheese()"></div>
                     </div>
                     <div class="col-md-4 mt-4 cheese-information">
                         <div class="cheese-inventory">
@@ -82,7 +85,8 @@
                         <div class="cheese-store">
                             <h1 class="d-flex justify-content-center text-warning">Cheese Store</h1>
                             <div class="d-flex justify-content-start">
-                                <button class="btn btn-dark cheese-store-buttons btn-sm text-warning">+1
+                                <button class="btn cheese-store-buttons btn-sm text-warning" id="cheeseKnifeButton"
+                                    onclick="purchaseCheeseKnife()">+1
                                     Cheese Knife</button>
                                 <p class="mining-pricing ml-3 mr-3 mt-2 text-light">= - 10</p>
                             </div>

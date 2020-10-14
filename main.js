@@ -113,18 +113,36 @@ const purchaseCheeseGrater = () => {
 // #region CHEESE CAPSULE
 const abilityCheeseCapsule = () => {
     if (cheeseCollected < 250) {
-        cheeseGraterButton.setAttribute('disabled', 'true')
+        cheeseCapsuleButton.setAttribute('disabled', 'true')
     } else if (cheeseCollected >= 250) {
-        cheeseGraterButton.style.backgroundColor = '#292b2c';
-        cheeseGraterButton.removeAttribute('disabled')
+        cheeseCapsuleButton.style.backgroundColor = '#292b2c';
+        cheeseCapsuleButton.removeAttribute('disabled')
     }
 }
 
 const purchaseCheeseCapsule = () => {
     cheeseCapsuleCount++;
     cheeseCollected - cheeseCapsulePurchased;
-    inventoryCheeseGrater.innerText = (cheeseCapsuleCount).toString();
+    inventoryCheeseCapsule.innerText = (cheeseCapsuleCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseCapsulePurchased).toString();
+}
+// #endregion
+
+// #region CHEESE DOZER
+const abilityCheeseDozer = () => {
+    if (cheeseCollected < 550) {
+        cheeseDozerButton.setAttribute('disabled', 'true')
+    } else if (cheeseCollected >= 550) {
+        cheeseDozerButton.style.backgroundColor = '#292b2c';
+        cheeseDozerButton.removeAttribute('disabled')
+    }
+}
+
+const purchaseCheeseDozer = () => {
+    cheeseDozerCount++;
+    cheeseCollected - cheeseDozerPurchased;
+    inventoryCheeseDozer.innerText = (cheeseDozerCount).toString();
+    allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseDozerPurchased).toString();
 }
 // #endregion
 

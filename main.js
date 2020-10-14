@@ -75,6 +75,7 @@ const mineCheese = () => {
         abilityCheeseDozer();
         abilityCheeseAssistant();
         abilityCheeseTrailer();
+        abilityCheeseCat();
     }, 1000);
 }
 
@@ -183,6 +184,24 @@ const purchaseCheeseTrailer = () => {
     cheeseCollected - cheeseTrailerPurchased;
     inventoryCheeseTrailer.innerText = (cheeseTrailerCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseTrailerPurchased).toString();
+}
+// #endregion
+
+// #region CHEESE CAT
+const abilityCheeseCat = () => {
+    if (cheeseCollected < 2250) {
+        cheeseCatButton.setAttribute('disabled', 'true')
+    } else if (cheeseCollected >= 2250) {
+        cheeseCatButton.style.backgroundColor = '#292b2c';
+        cheeseCatButton.removeAttribute('disabled')
+    }
+}
+
+const purchaseCheeseCat = () => {
+    cheeseCatCount++;
+    cheeseCollected - cheeseCatPurchased;
+    inventoryCheeseCat.innerText = (cheeseCatCount).toString();
+    allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseCatPurchased).toString();
 }
 // #endregion
 

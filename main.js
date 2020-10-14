@@ -76,6 +76,7 @@ const mineCheese = () => {
         abilityCheeseAssistant();
         abilityCheeseTrailer();
         abilityCheeseCat();
+        abilityCheeseHippo();
     }, 1000);
 }
 
@@ -205,3 +206,20 @@ const purchaseCheeseCat = () => {
 }
 // #endregion
 
+// #region CHEESE HIPPO
+const abilityCheeseHippo = () => {
+    if (cheeseCollected < 3500) {
+        cheeseHippoButton.setAttribute('disabled', 'true')
+    } else if (cheeseCollected >= 3500) {
+        cheeseHippoButton.style.backgroundColor = '#292b2c';
+        cheeseHippoButton.removeAttribute('disabled')
+    }
+}
+
+const purchaseCheeseHippo = () => {
+    cheeseHippoCount++;
+    cheeseCollected - cheeseHippoPurchased;
+    inventoryCheeseHippo.innerText = (cheeseHippoCount).toString();
+    allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseHippoPurchased).toString();
+}
+// #endregion

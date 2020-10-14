@@ -18,8 +18,8 @@ let cheeseHippoPurchased = 3500;
 let cheeseKnifeCount = 0;
 let cheeseGraterCount = 0;
 let cheeseCapsuleCount = 0;
-let cheeseAssistantCount = 0;
 let cheeseDozerCount = 0;
+let cheeseAssistantCount = 0;
 let cheeseTrailerCount = 0;
 let cheeseCatCount = 0;
 let cheeseHippoCount = 0;
@@ -34,8 +34,8 @@ let totalMineCheese = document.getElementById('cheeseMineTotal');
 let cheeseKnifeButton = document.getElementById('cheeseKnifeButton');
 let cheeseGraterButton = document.getElementById('cheeseGraterButton');
 let cheeseCapsuleButton = document.getElementById('cheeseCapsuleButton')
-let cheeseAssistantButton = document.getElementById('cheeseAssistantButton')
 let cheeseDozerButton = document.getElementById('cheeseDozerButton')
+let cheeseAssistantButton = document.getElementById('cheeseAssistantButton')
 let cheeseTrailerButton = document.getElementById('cheeseTrailerButton')
 let cheeseCatButton = document.getElementById('cheeseCatButton')
 let cheeseHippoButton = document.getElementById('cheeseHippoButton')
@@ -45,8 +45,8 @@ let cheeseHippoButton = document.getElementById('cheeseHippoButton')
 let inventoryCheeseKnife = document.getElementById('cheeseKnifeCount');
 let inventoryCheeseGrater = document.getElementById('cheeseGraterCount');
 let inventoryCheeseCapsule = document.getElementById('cheeseGraterCount');
-let inventoryCheeseAssistant = document.getElementById('cheeseGraterCount');
 let inventoryCheeseDozer = document.getElementById('cheeseGraterCount');
+let inventoryCheeseAssistant = document.getElementById('cheeseGraterCount');
 let inventoryCheeseTrailer = document.getElementById('cheeseGraterCount');
 let inventoryCheeseCat = document.getElementById('cheeseGraterCount');
 let inventoryCheeseHippo = document.getElementById('cheeseGraterCount');
@@ -56,8 +56,8 @@ let inventoryCheeseHippo = document.getElementById('cheeseGraterCount');
 cheeseKnifeButton.setAttribute('disabled', 'true')
 cheeseGraterButton.setAttribute('disabled', 'true')
 cheeseCapsuleButton.setAttribute('disabled', 'true')
-cheeseAssistantButton.setAttribute('disabled', 'true')
 cheeseDozerButton.setAttribute('disabled', 'true')
+cheeseAssistantButton.setAttribute('disabled', 'true')
 cheeseTrailerButton.setAttribute('disabled', 'true')
 cheeseCatButton.setAttribute('disabled', 'true')
 cheeseHippoButton.setAttribute('disabled', 'true')
@@ -74,6 +74,7 @@ const mineCheese = () => {
     }, 1000);
 }
 
+// #region CHEESE KNIFE 
 const abilityCheeseKnife = () => {
     if (cheeseCollected < 25) {
         cheeseKnifeButton.setAttribute('disabled', 'true')
@@ -89,7 +90,9 @@ const purchaseCheeseKnife = () => {
     inventoryCheeseKnife.innerText = (cheeseKnifeCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseKnifePurchased).toString();
 }
+// #endregion
 
+// #region CHEESE GRATER
 const abilityCheeseGrater = () => {
     if (cheeseCollected < 75) {
         cheeseGraterButton.setAttribute('disabled', 'true')
@@ -105,3 +108,23 @@ const purchaseCheeseGrater = () => {
     inventoryCheeseGrater.innerText = (cheeseGraterCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseGraterPurchased).toString();
 }
+// #endregion
+
+// #region CHEESE CAPSULE
+const abilityCheeseCapsule = () => {
+    if (cheeseCollected < 250) {
+        cheeseGraterButton.setAttribute('disabled', 'true')
+    } else if (cheeseCollected >= 250) {
+        cheeseGraterButton.style.backgroundColor = '#292b2c';
+        cheeseGraterButton.removeAttribute('disabled')
+    }
+}
+
+const purchaseCheeseCapsule = () => {
+    cheeseCapsuleCount++;
+    cheeseCollected - cheeseCapsulePurchased;
+    inventoryCheeseGrater.innerText = (cheeseCapsuleCount).toString();
+    allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseCapsulePurchased).toString();
+}
+// #endregion
+

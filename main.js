@@ -8,7 +8,7 @@ let cheeseKnifePurchased = 25;
 let cheeseGraterPurchased = 75;
 let cheeseCapsulePurchased = 250;
 let cheeseDozerPurchased = 550;
-let moustronautAssistantPurchased = 850;
+let cheeseAssistantPurchased = 850;
 let cheeseTrailerPurchased = 1500;
 let cheeseCatPurchased = 2250;
 let cheeseHippoPurchased = 3500;
@@ -71,6 +71,9 @@ const mineCheese = () => {
         totalMineCheese.innerText = (totalCheeseMine).toString();
         abilityCheeseKnife();
         abilityCheeseGrater();
+        abilityCheeseCapsule();
+        abilityCheeseDozer();
+        abilityCheeseAssistant();
     }, 1000);
 }
 
@@ -143,6 +146,24 @@ const purchaseCheeseDozer = () => {
     cheeseCollected - cheeseDozerPurchased;
     inventoryCheeseDozer.innerText = (cheeseDozerCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseDozerPurchased).toString();
+}
+// #endregion
+
+// #region CHEESE ASSISTANT
+const abilityCheeseAssistant = () => {
+    if (cheeseCollected < 850) {
+        cheeseAssistantButton.setAttribute('disabled', 'true')
+    } else if (cheeseCollected >= 850) {
+        cheeseAssistantButton.style.backgroundColor = '#292b2c';
+        cheeseAssistantButton.removeAttribute('disabled')
+    }
+}
+
+const purchaseCheeseAssistant = () => {
+    cheeseAssistantCount++;
+    cheeseCollected - cheeseAssistantPurchased;
+    inventoryCheeseAssistant.innerText = (cheeseAssistantCount).toString();
+    allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseAssistantPurchased).toString();
 }
 // #endregion
 

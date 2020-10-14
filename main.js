@@ -44,12 +44,12 @@ let cheeseHippoButton = document.getElementById('cheeseHippoButton')
 // #region INVENTORY DOM
 let inventoryCheeseKnife = document.getElementById('cheeseKnifeCount');
 let inventoryCheeseGrater = document.getElementById('cheeseGraterCount');
-let inventoryCheeseCapsule = document.getElementById('cheeseGraterCount');
-let inventoryCheeseDozer = document.getElementById('cheeseGraterCount');
-let inventoryCheeseAssistant = document.getElementById('cheeseGraterCount');
-let inventoryCheeseTrailer = document.getElementById('cheeseGraterCount');
-let inventoryCheeseCat = document.getElementById('cheeseGraterCount');
-let inventoryCheeseHippo = document.getElementById('cheeseGraterCount');
+let inventoryCheeseCapsule = document.getElementById('cheeseCapsuleCount');
+let inventoryCheeseDozer = document.getElementById('cheeseDozerCount');
+let inventoryCheeseAssistant = document.getElementById('cheeseAssistantCount');
+let inventoryCheeseTrailer = document.getElementById('cheeseTrailerCount');
+let inventoryCheeseCat = document.getElementById('cheeseCatCount');
+let inventoryCheeseHippo = document.getElementById('cheeseHippoCount');
 // #endregion
 
 // #region DISABLED BUTTONS

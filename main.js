@@ -74,6 +74,7 @@ const mineCheese = () => {
         abilityCheeseCapsule();
         abilityCheeseDozer();
         abilityCheeseAssistant();
+        abilityCheeseTrailer();
     }, 1000);
 }
 
@@ -164,6 +165,24 @@ const purchaseCheeseAssistant = () => {
     cheeseCollected - cheeseAssistantPurchased;
     inventoryCheeseAssistant.innerText = (cheeseAssistantCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseAssistantPurchased).toString();
+}
+// #endregion
+
+// #region CHEESE TRAILER
+const abilityCheeseTrailer = () => {
+    if (cheeseCollected < 1500) {
+        cheeseTrailerButton.setAttribute('disabled', 'true')
+    } else if (cheeseCollected >= 1500) {
+        cheeseTrailerButton.style.backgroundColor = '#292b2c';
+        cheeseTrailerButton.removeAttribute('disabled')
+    }
+}
+
+const purchaseCheeseTrailer = () => {
+    cheeseTrailerCount++;
+    cheeseCollected - cheeseTrailerPurchased;
+    inventoryCheeseTrailer.innerText = (cheeseTrailerCount).toString();
+    allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseTrailerPurchased).toString();
 }
 // #endregion
 

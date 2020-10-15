@@ -89,28 +89,29 @@ const mineCheese = () => {
     abilityCheeseCat();
     abilityCheeseHippo();
     if (cheeseKnifeCount >= 1) {
-        cheeseCollected = cheeseCollected + cheeseKnifeCount + 1;
-        totalCheeseMine = totalCheeseMine + cheeseKnifeCount + 1;
+        cheeseCollected = cheeseCollected + cheeseKnifeCount + 2;
+        totalCheeseMine = totalCheeseMine + cheeseKnifeCount + 2;
     }
     if (cheeseGraterCount >= 1) {
-        cheeseCollected = cheeseCollected + cheeseGraterCount + 2;
-        totalCheeseMine = totalCheeseMine + cheeseGraterCount + 2;
+        cheeseCollected = cheeseCollected + cheeseGraterCount + 3;
+        totalCheeseMine = totalCheeseMine + cheeseGraterCount + 3;
     }
     if (cheeseCapsuleCount >= 1) {
-        cheeseCollected = cheeseCollected + cheeseCapsuleCount + 3;
-        totalCheeseMine = totalCheeseMine + cheeseCapsuleCount + 3;
+        cheeseCollected = cheeseCollected + cheeseCapsuleCount + 5;
+        totalCheeseMine = totalCheeseMine + cheeseCapsuleCount + 5;
     }
     if (cheeseDozerCount >= 1) {
-        cheeseCollected = cheeseCollected + cheeseDozerCount + 5;
-        totalCheeseMine = totalCheeseMine + cheeseDozerCount + 5;
+        cheeseCollected = cheeseCollected + cheeseDozerCount + 7;
+        totalCheeseMine = totalCheeseMine + cheeseDozerCount + 7;
     }
+
 }
 
 // #region CHEESE KNIFE 
 const abilityCheeseKnife = () => {
     if (cheeseCollected >= cheeseKnifePurchased) {
         cheeseKnifeButton.style.backgroundColor = '#292b2c';
-        cheeseKnifeButton.removeAttribute('disabled')
+        cheeseKnifeButton.removeAttribute('disabled');
     }
 }
 
@@ -124,6 +125,7 @@ const purchaseCheeseKnife = () => {
         cheeseKnifePurchased = cheeseKnifePurchased + Math.floor(cheeseKnifePurchased / 5) + cheeseKnifeCount;
         cheeseKnifePurchasePrice.innerText = (cheeseKnifePurchased).toString();
     }
+    buttonDisableFromPurchase();
 }
 // #endregion
 
@@ -131,7 +133,7 @@ const purchaseCheeseKnife = () => {
 const abilityCheeseGrater = () => {
     if (cheeseCollected >= cheeseGraterPurchased) {
         cheeseGraterButton.style.backgroundColor = '#292b2c';
-        cheeseGraterButton.removeAttribute('disabled')
+        cheeseGraterButton.removeAttribute('disabled');
     }
 }
 
@@ -145,6 +147,7 @@ const purchaseCheeseGrater = () => {
         cheeseGraterPurchased = cheeseGraterPurchased + Math.floor(cheeseGraterPurchased / 5) + cheeseGraterCount;
         cheeseGraterPurchasePrice.innerText = (cheeseGraterPurchased).toString();
     }
+    buttonDisableFromPurchase();
 }
 // #endregion
 
@@ -153,6 +156,7 @@ const abilityCheeseCapsule = () => {
     if (cheeseCollected >= cheeseCapsulePurchased) {
         cheeseCapsuleButton.style.backgroundColor = '#292b2c';
         cheeseCapsuleButton.removeAttribute('disabled')
+
     }
 }
 
@@ -166,6 +170,7 @@ const purchaseCheeseCapsule = () => {
         cheeseCapsulePurchased = cheeseCapsulePurchased + Math.floor(cheeseCapsulePurchased / 5) + cheeseCapsuleCount;
         cheeseCapsulePurchasePrice.innerText = (cheeseCapsulePurchased).toString();
     }
+    buttonDisableFromPurchase();
 }
 // #endregion
 
@@ -174,6 +179,7 @@ const abilityCheeseDozer = () => {
     if (cheeseCollected >= cheeseDozerPurchased) {
         cheeseDozerButton.style.backgroundColor = '#292b2c';
         cheeseDozerButton.removeAttribute('disabled')
+
     }
 }
 
@@ -187,6 +193,7 @@ const purchaseCheeseDozer = () => {
         cheeseDozerPurchased = cheeseDozerPurchased + Math.floor(cheeseDozerPurchased / 5) + cheeseDozerCount;
         cheeseDozerPurchasePrice.innerText = (cheeseDozerPurchased).toString();
     }
+    buttonDisableFromPurchase();
 }
 // #endregion
 
@@ -209,9 +216,10 @@ const purchaseCheeseAssistant = () => {
         cheeseAssistantPurchasePrice.innerText = (cheeseAssistantPurchased).toString();
     }
     setInterval(() => {
-        allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseAssistantCount + 7)).toString();
-        totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseAssistantCount + 7)).toString();
+        allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseAssistantCount + 15)).toString();
+        totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseAssistantCount + 15)).toString();
     }, 3000)
+    buttonDisableFromPurchase();
 }
 // #endregion
 
@@ -220,6 +228,7 @@ const abilityCheeseTrailer = () => {
     if (cheeseCollected >= cheeseTrailerPurchased) {
         cheeseTrailerButton.style.backgroundColor = '#292b2c';
         cheeseTrailerButton.removeAttribute('disabled')
+
     }
 }
 
@@ -233,9 +242,10 @@ const purchaseCheeseTrailer = () => {
         cheeseTrailerPurchased = cheeseTrailerPurchased + Math.floor(cheeseTrailerPurchased / 5) + cheeseTrailerCount;
         cheeseTrailerPurchasePrice.innerText = (cheeseTrailerPurchased).toString();
     }
+    buttonDisableFromPurchase();
     setInterval(() => {
-        allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseTrailerCount + 8)).toString();
-        totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseTrailerCount + 8)).toString();
+        allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseTrailerCount + 25)).toString();
+        totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseTrailerCount + 25)).toString();
     }, 2000)
 }
 // #endregion
@@ -258,9 +268,10 @@ const purchaseCheeseCat = () => {
         cheeseCatPurchased = cheeseCatPurchased + Math.floor(cheeseCatPurchased / 5) + cheeseCatCount;
         cheeseCatPurchasePrice.innerText = (cheeseCatPurchased).toString();
     }
+    buttonDisableFromPurchase();
     setInterval(() => {
-        allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseCatCount + 8)).toString();
-        totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseCatCount + 8)).toString();
+        allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseCatCount + 35)).toString();
+        totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseCatCount + 35)).toString();
     }, 2000)
 }
 // #endregion
@@ -270,6 +281,7 @@ const abilityCheeseHippo = () => {
     if (cheeseCollected >= cheeseHippoPurchased) {
         cheeseHippoButton.style.backgroundColor = '#292b2c';
         cheeseHippoButton.removeAttribute('disabled')
+
     }
 }
 
@@ -283,9 +295,39 @@ const purchaseCheeseHippo = () => {
         cheeseHippoPurchased = cheeseHippoPurchased + Math.floor(cheeseHippoPurchased / 5) + cheeseHippoCount;
         cheeseHippoPurchasePrice.innerText = (cheeseHippoPurchased).toString();
     }
+    buttonDisableFromPurchase();
     setInterval(() => {
-        allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseHippoCount + 10)).toString();
-        totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseHippoCount + 10)).toString();
+        allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseHippoCount + 50)).toString();
+        totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseHippoCount + 50)).toString();
     }, 1000)
+}
+// #endregion
+
+// #region BUTTON DISABLE AFTER PURCHASE
+const buttonDisableFromPurchase = () => {
+    if (cheeseCollected < cheeseKnifePurchased) {
+        cheeseKnifeButton.setAttribute('disabled', 'true')
+    }
+    if (cheeseCollected < cheeseGraterPurchased) {
+        cheeseGraterButton.setAttribute('disabled', 'true')
+    }
+    if (cheeseCollected < cheeseCapsulePurchased) {
+        cheeseCapsuleButton.setAttribute('disabled', 'true')
+    }
+    if (cheeseCollected < cheeseDozerPurchased) {
+        cheeseDozerButton.setAttribute('disabled', 'true')
+    }
+    if (cheeseCollected < cheeseAssistantPurchased) {
+        cheeseAssistantButton.setAttribute('disabled', 'true')
+    }
+    if (cheeseCollected < cheeseTrailerPurchased) {
+        cheeseTrailerButton.setAttribute('disabled', 'true')
+    }
+    if (cheeseCollected < cheeseCatPurchased) {
+        cheeseCatButton.setAttribute('disabled', 'true')
+    }
+    if (cheeseCollected < cheeseHippoPurchased) {
+        cheeseHippoButton.setAttribute('disabled', 'true')
+    }
 }
 // #endregion

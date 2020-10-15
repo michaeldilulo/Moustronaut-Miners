@@ -503,21 +503,27 @@ const buttonDisableFromPurchase = () => {
 const cheeseAchievementCompleted = () => {
     if (totalCheeseMine === firstCheese) {
         firstCheeseAchievement.style.opacity = '1';
+        firstCheeseButton.removeAttribute('disabled')
     }
     if (totalCheeseMine === secondCheese) {
         secondCheeseAchievement.style.opacity = '1';
+        secondCheeseButton.removeAttribute('disabled')
     }
     if (totalCheeseMine === thirdCheese) {
         thirdCheeseAchievement.style.opacity = '1';
+        thirdCheeseButton.removeAttribute('disabled')
     }
     if (totalCheeseMine === fourthCheese) {
         fourthCheeseAchievement.style.opacity = '1';
+        fourthCheeseButton.removeAttribute('disabled')
     }
     if (totalCheeseMine === fifthCheese) {
         fifthCheeseAchievement.style.opacity = '1';
+        fifthCheeseButton.removeAttribute('disabled')
     }
     if (totalCheeseMine === sixthCheese) {
         sixthCheeseAchievement.style.opacity = '1';
+        sixthCheeseButton.removeAttribute('disabled')
     }
 }
 

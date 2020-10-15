@@ -37,7 +37,7 @@ let fifthAllItemAchievementCollected = 2250;
 let sixthAllItemAchievementCollected = 3000;
 //#endregion
 
-//#region COLLECTION ACHIEVEMENT TOTAL POINTS DATA
+// #region COLLECTION ACHIEVEMENT TOTAL POINTS DATA
 let firstCheese = 25000;
 let secondCheese = 50000;
 let thirdCheese = 75000;
@@ -70,8 +70,8 @@ let fifthItem = 15;
 let sixthItem = 20;
 //#endregion
 
-//#region ACHIEVEMENT COLLECTED
-let firstCheeseAchievementCollectedText = document.getElementById('firstCheeseAchievementCollected');
+// #region ACHIEVEMENT COLLECTED
+let achievementCollectedText = document.getElementById('achievementCollected');
 //#endregion
 
 // #region PURCHASE DATA
@@ -671,7 +671,7 @@ const allItemAchievementCollected = () => {
 
 //#endregion
 
-//#region ACHIEVEMENT AWARDED ON CLICK CHEESE
+// #region ACHIEVEMENT AWARDED ON CLICK CHEESE
 const collectFirstCheeseAchievementPoints = () => {
     firstCheeseButton.setAttribute('disabled', 'true');
     firstCheeseButton.innerText = 'Collected';
@@ -707,5 +707,156 @@ const collectSixthCheeseAchievementPoints = () => {
     sixthCheeseButton.innerText = 'Collected';
     moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + sixthCheeseAchievementCollected).toString();
 }
+//#endregion
 
+//#region ACHIEVEMENT AWARDED ON CLICK ASSISTANTS
+const collectFirstAssistantAchievementPoints = () => {
+    firstAssistantButton.setAttribute('disabled', 'true');
+    firstAssistantButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + firstAssistantAchievementCollected).toString();
+}
+
+const collectSecondAssistantAchievementPoints = () => {
+    secondAssistantButton.setAttribute('disabled', 'true');
+    secondAssistantButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + secondAssistantAchievementCollected).toString();
+}
+
+const collectThirdAssistantAchievementPoints = () => {
+    thirdAssistantButton.setAttribute('disabled', 'true');
+    thirdAssistantButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + thirdAssistantAchievementCollected).toString();
+}
+
+const collectFourthAssistantAchievementPoints = () => {
+    fourthAssistantButton.setAttribute('disabled', 'true');
+    fourthAssistantButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fourthAssistantAchievementCollected).toString();
+}
+
+const collectFifthAssistantAchievementPoints = () => {
+    fifthAssistantButton.setAttribute('disabled', 'true');
+    fifthAssistantButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fifthAssistantAchievementCollected).toString();
+}
+
+const collectSixthAssistantAchievementPoints = () => {
+    sixthAssistantButton.setAttribute('disabled', 'true');
+    sixthAssistantButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + sixthAssistantAchievementCollected).toString();
+}
+//#endregion
+
+//#region ACHIEVEMENT AWARDED ON CLICK CATS
+const collectFirstCatAchievementPoints = () => {
+    firstCatButton.setAttribute('disabled', 'true');
+    firstCatButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + firstCatAchievementCollected).toString();
+}
+
+const collectSecondCatAchievementPoints = () => {
+    secondCatButton.setAttribute('disabled', 'true');
+    secondCatButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + secondCatAchievementCollected).toString();
+}
+
+const collectThirdCatAchievementPoints = () => {
+    thirdCatButton.setAttribute('disabled', 'true');
+    thirdCatButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + thirdCatAchievementCollected).toString();
+}
+
+const collectFourthCatAchievementPoints = () => {
+    fourthCatButton.setAttribute('disabled', 'true');
+    fourthCatButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fourthCatAchievementCollected).toString();
+}
+
+const collectFifthCatAchievementPoints = () => {
+    fifthCatButton.setAttribute('disabled', 'true');
+    fifthCatButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fifthCatAchievementCollected).toString();
+}
+
+const collectSixthCatAchievementPoints = () => {
+    sixthCatButton.setAttribute('disabled', 'true');
+    sixthCatButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + sixthCatAchievementCollected).toString();
+}
+//#endregion
+
+//#region ACHIEVEMENT AWARDED ON CLICK HIPPOS
+const collectFirstHippoAchievementPoints = () => {
+    firstHippoButton.setAttribute('disabled', 'true');
+    firstHippoButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + firstHippoAchievementCollected).toString();
+}
+
+const collectSecondHippoAchievementPoints = () => {
+    secondHippoButton.setAttribute('disabled', 'true');
+    secondHippoButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + secondHippoAchievementCollected).toString();
+}
+
+const collectThirdHippoAchievementPoints = () => {
+    thirdHippoButton.setAttribute('disabled', 'true');
+    thirdHippoButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + thirdHippoAchievementCollected).toString();
+}
+
+const collectFourthHippoAchievementPoints = () => {
+    fourthHippoButton.setAttribute('disabled', 'true');
+    fourthHippoButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fourthHippoAchievementCollected).toString();
+}
+
+const collectFifthHippoAchievementPoints = () => {
+    fifthHippoButton.setAttribute('disabled', 'true');
+    fifthHippoButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fifthHippoAchievementCollected).toString();
+}
+
+const collectSixthHippoAchievementPoints = () => {
+    sixthHippoButton.setAttribute('disabled', 'true');
+    sixthHippoButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + sixthHippoAchievementCollected).toString();
+}
+//#endregion
+
+//#region ACHIEVEMENT AWARDED ON CLICK ITEMS
+const collectFirstItemAchievementPoints = () => {
+    firstItemButton.setAttribute('disabled', 'true');
+    firstItemButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + firstAllItemAchievementCollected).toString();
+}
+
+const collectSecondItemAchievementPoints = () => {
+    secondItemButton.setAttribute('disabled', 'true');
+    secondItemButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + secondAllItemAchievementCollected).toString();
+}
+
+const collectThirdItemAchievementPoints = () => {
+    thirdItemButton.setAttribute('disabled', 'true');
+    thirdItemButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + thirdAllItemAchievementCollected).toString();
+}
+
+const collectFourthItemAchievementPoints = () => {
+    fourthItemButton.setAttribute('disabled', 'true');
+    fourthItemButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fourthAllItemAchievementCollected).toString();
+}
+
+const collectFifthItemAchievementPoints = () => {
+    fifthItemButton.setAttribute('disabled', 'true');
+    fifthItemButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fifthAllItemAchievementCollected).toString();
+}
+
+const collectSixthItemAchievementPoints = () => {
+    sixthItemButton.setAttribute('disabled', 'true');
+    sixthItemButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + sixthAllItemAchievementCollected).toString();
+}
 //#endregion

@@ -34,7 +34,7 @@ let secondAllItemAchievementCollected = 1200;
 let thirdAllItemAchievementCollected = 1350;
 let fourthAllItemAchievementCollected = 1500;
 let fifthAllItemAchievementCollected = 2250;
-let sixthAllItemAchievementCollected = 3000;
+let sixthAllItemAchievementCollected = 3225;
 //#endregion
 
 // #region COLLECTION ACHIEVEMENT TOTAL POINTS DATA
@@ -111,6 +111,8 @@ let cheeseAssistantButton = document.getElementById('cheeseAssistantButton');
 let cheeseTrailerButton = document.getElementById('cheeseTrailerButton');
 let cheeseCatButton = document.getElementById('cheeseCatButton');
 let cheeseHippoButton = document.getElementById('cheeseHippoButton');
+
+
 let firstCheeseButton = document.getElementById('firstAchievementCheese');
 let secondCheeseButton = document.getElementById('secondAchievementCheese');
 let thirdCheeseButton = document.getElementById('thirdAchievementCheese');
@@ -240,8 +242,8 @@ let fifthItemAchievement = document.getElementById('fifthItemCollectedAchievemen
 let sixthItemAchievement = document.getElementById('sixthItemCollectedAchievement');
 //#endregion
 
-
 const mineCheese = () => {
+
     cheeseCollected++;
     totalCheeseMine++;
     allCheeseCollected.innerText = (cheeseCollected).toString();
@@ -254,11 +256,6 @@ const mineCheese = () => {
     abilityCheeseTrailer();
     abilityCheeseCat();
     abilityCheeseHippo();
-    cheeseAchievementCompleted();
-    assistantAchievementCollected();
-    catAchievementCollected();
-    hippoAchievementCollected();
-    allItemAchievementCollected();
     if (cheeseKnifeCount >= 1) {
         cheeseCollected = cheeseCollected + cheeseKnifeCount + 2;
         totalCheeseMine = totalCheeseMine + cheeseKnifeCount + 2;
@@ -326,7 +323,6 @@ const abilityCheeseCapsule = () => {
     if (cheeseCollected >= cheeseCapsulePurchased) {
         cheeseCapsuleButton.style.backgroundColor = '#292b2c';
         cheeseCapsuleButton.removeAttribute('disabled')
-
     }
 }
 
@@ -349,7 +345,6 @@ const abilityCheeseDozer = () => {
     if (cheeseCollected >= cheeseDozerPurchased) {
         cheeseDozerButton.style.backgroundColor = '#292b2c';
         cheeseDozerButton.removeAttribute('disabled')
-
     }
 }
 
@@ -389,7 +384,7 @@ const purchaseCheeseAssistant = () => {
         allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseAssistantCount + 15)).toString();
         totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseAssistantCount + 15)).toString();
     }, 3000)
-    buttonDisableFromPurchase();
+    buttonDisableFromPurchase()
 }
 // #endregion
 
@@ -398,7 +393,6 @@ const abilityCheeseTrailer = () => {
     if (cheeseCollected >= cheeseTrailerPurchased) {
         cheeseTrailerButton.style.backgroundColor = '#292b2c';
         cheeseTrailerButton.removeAttribute('disabled')
-
     }
 }
 
@@ -451,7 +445,6 @@ const abilityCheeseHippo = () => {
     if (cheeseCollected >= cheeseHippoPurchased) {
         cheeseHippoButton.style.backgroundColor = '#292b2c';
         cheeseHippoButton.removeAttribute('disabled')
-
     }
 }
 
@@ -470,6 +463,7 @@ const purchaseCheeseHippo = () => {
         allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseHippoCount + 50)).toString();
         totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseHippoCount + 50)).toString();
     }, 1000)
+
 }
 // #endregion
 
@@ -505,32 +499,32 @@ const buttonDisableFromPurchase = () => {
 // #region ACHIEVEMENT COMPLETED
 
 const cheeseAchievementCompleted = () => {
-    if (totalCheeseMine === firstCheese) {
+    if (totalCheeseMine >= firstCheese) {
         firstCheeseAchievement.style.opacity = '1';
         firstCheeseButton.removeAttribute('disabled');
         firstCheeseButton.style.backgroundColor = '#5cb85c';
     }
-    if (totalCheeseMine === secondCheese) {
+    if (totalCheeseMine >= secondCheese) {
         secondCheeseAchievement.style.opacity = '1';
         secondCheeseButton.removeAttribute('disabled');
         secondCheeseButton.style.backgroundColor = '#5cb85c';
     }
-    if (totalCheeseMine === thirdCheese) {
+    if (totalCheeseMine >= thirdCheese) {
         thirdCheeseAchievement.style.opacity = '1';
         thirdCheeseButton.removeAttribute('disabled');
         thirdCheeseButton.style.backgroundColor = '#5cb85c';
     }
-    if (totalCheeseMine === fourthCheese) {
+    if (totalCheeseMine >= fourthCheese) {
         fourthCheeseAchievement.style.opacity = '1';
         fourthCheeseButton.removeAttribute('disabled');
         fourthCheeseButton.style.backgroundColor = '#5cb85c';
     }
-    if (totalCheeseMine === fifthCheese) {
+    if (totalCheeseMine >= fifthCheese) {
         fifthCheeseAchievement.style.opacity = '1';
         fifthCheeseButton.removeAttribute('disabled');
         fifthCheeseButton.style.backgroundColor = '#5cb85c';
     }
-    if (totalCheeseMine === sixthCheese) {
+    if (totalCheeseMine >= sixthCheese) {
         sixthCheeseAchievement.style.opacity = '1';
         sixthCheeseButton.removeAttribute('disabled');
         sixthCheeseButton.style.backgroundColor = '#5cb85c';
@@ -538,32 +532,32 @@ const cheeseAchievementCompleted = () => {
 }
 
 const assistantAchievementCollected = () => {
-    if (cheeseAssistantCount === firstAssistant) {
+    if (cheeseAssistantCount >= firstAssistant) {
         firstAssistantAchievement.style.opacity = '1';
         firstAssistantButton.removeAttribute('disabled');
         firstAssistantButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseAssistantCount === secondAssistant) {
+    if (cheeseAssistantCount >= secondAssistant) {
         secondAssistantAchievement.style.opacity = '1';
         secondAssistantButton.removeAttribute('disabled');
         secondAssistantButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseAssistantCount === thirdAssistant) {
+    if (cheeseAssistantCount >= thirdAssistant) {
         thirdAssistantAchievement.style.opacity = '1';
         thirdAssistantButton.removeAttribute('disabled');
         thirdAssistantButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseAssistantCount === fourthAssistant) {
+    if (cheeseAssistantCount >= fourthAssistant) {
         fourthAssistantAchievement.style.opacity = '1';
         fourthAssistantButton.removeAttribute('disabled');
         fourthAssistantButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseAssistantCount === fifthAssistant) {
+    if (cheeseAssistantCount >= fifthAssistant) {
         fifthAssistantAchievement.style.opacity = '1';
         fifthAssistantButton.removeAttribute('disabled');
         fifthAssistantButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseAssistantCount === sixthAssistant) {
+    if (cheeseAssistantCount >= sixthAssistant) {
         sixthAssistantAchievement.style.opacity = '1';
         sixthAssistantButton.removeAttribute('disabled');
         sixthAssistantButton.style.backgroundColor = '#5cb85c';
@@ -571,32 +565,32 @@ const assistantAchievementCollected = () => {
 }
 
 const catAchievementCollected = () => {
-    if (cheeseCatCount === firstCat) {
+    if (cheeseCatCount >= firstCat) {
         firstCatAchievement.style.opacity = '1';
         firstCatButton.removeAttribute('disabled');
         firstCatButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseCatCount === secondCat) {
+    if (cheeseCatCount >= secondCat) {
         secondCatAchievement.style.opacity = '1';
         secondCatButton.removeAttribute('disabled');
         secondCatButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseCatCount === thirdCat) {
+    if (cheeseCatCount >= thirdCat) {
         thirdCatAchievement.style.opacity = '1';
         thirdCatButton.removeAttribute('disabled');
         thirdCatButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseCatCount === fourthCat) {
+    if (cheeseCatCount >= fourthCat) {
         fourthCatAchievement.style.opacity = '1';
         fourthCatButton.removeAttribute('disabled');
         fourthCatButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseCatCount === fifthCat) {
+    if (cheeseCatCount >= fifthCat) {
         fifthCatAchievement.style.opacity = '1';
         fifthCatButton.removeAttribute('disabled');
         fifthCatButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseCatCount === sixthCat) {
+    if (cheeseCatCount >= sixthCat) {
         sixthCatAchievement.style.opacity = '1';
         sixthCatButton.removeAttribute('disabled');
         sixthCatButton.style.backgroundColor = '#5cb85c';
@@ -604,32 +598,32 @@ const catAchievementCollected = () => {
 }
 
 const hippoAchievementCollected = () => {
-    if (cheeseHippoCount === firstHippo) {
+    if (cheeseHippoCount >= firstHippo) {
         firstHippoAchievement.style.opacity = '1';
         firstHippoButton.removeAttribute('disabled');
         firstHippoButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseHippoCount === secondHippo) {
+    if (cheeseHippoCount >= secondHippo) {
         secondHippoAchievement.style.opacity = '1';
         secondHippoButton.removeAttribute('disabled');
         secondHippoButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseHippoCount === thirdHippo) {
+    if (cheeseHippoCount >= thirdHippo) {
         thirdHippoAchievement.style.opacity = '1';
         thirdHippoButton.removeAttribute('disabled');
         thirdHippoButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseHippoCount === fourthHippo) {
+    if (cheeseHippoCount >= fourthHippo) {
         fourthHippoAchievement.style.opacity = '1';
         fourthHippoButton.removeAttribute('disabled');
         fourthHippoButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseHippoCount === fifthHippo) {
+    if (cheeseHippoCount >= fifthHippo) {
         fifthHippoAchievement.style.opacity = '1';
         fifthHippoButton.removeAttribute('disabled');
         fifthHippoButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseHippoCount === sixthHippo) {
+    if (cheeseHippoCount >= sixthHippo) {
         sixthHippoAchievement.style.opacity = '1';
         sixthHippoButton.removeAttribute('disabled');
         sixthHippoButton.style.backgroundColor = '#5cb85c';
@@ -637,38 +631,38 @@ const hippoAchievementCollected = () => {
 }
 
 const allItemAchievementCollected = () => {
-    if (cheeseKnifeCount === firstItem && cheeseGraterCount === firstItem && cheeseCapsuleCount === firstItem && cheeseDozerCount === firstItem && cheeseAssistantCount === firstItem
-        && cheeseTrailerCount === firstItem && cheeseCatCount === firstItem && cheeseHippoCount === firstItem) {
+    if (cheeseKnifeCount >= firstItem && cheeseGraterCount >= firstItem && cheeseCapsuleCount >= firstItem && cheeseDozerCount >= firstItem && cheeseAssistantCount >= firstItem
+        && cheeseTrailerCount >= firstItem && cheeseCatCount >= firstItem && cheeseHippoCount >= firstItem) {
         firstItemAchievement.style.opacity = '1';
         firstItemButton.removeAttribute('disabled');
         firstItemButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseKnifeCount === secondItem && cheeseGraterCount === secondItem && cheeseCapsuleCount === secondItem && cheeseDozerCount === secondItem && cheeseAssistantCount === secondItem
-        && cheeseTrailerCount === secondItem && cheeseCatCount === secondItem && cheeseHippoCount === secondItem) {
+    if (cheeseKnifeCount >= secondItem && cheeseGraterCount >= secondItem && cheeseCapsuleCount >= secondItem && cheeseDozerCount >= secondItem && cheeseAssistantCount >= secondItem
+        && cheeseTrailerCount >= secondItem && cheeseCatCount >= secondItem && cheeseHippoCount >= secondItem) {
         secondItemAchievement.style.opacity = '1';
         secondItemButton.removeAttribute('disabled');
         secondItemButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseKnifeCount === thirdItem && cheeseGraterCount === thirdItem && cheeseCapsuleCount === thirdItem && cheeseDozerCount === thirdItem && cheeseAssistantCount === thirdItem
-        && cheeseTrailerCount === thirdItem && cheeseCatCount === thirdItem && cheeseHippoCount === thirdItem) {
+    if (cheeseKnifeCount >= thirdItem && cheeseGraterCount >= thirdItem && cheeseCapsuleCount >= thirdItem && cheeseDozerCount >= thirdItem && cheeseAssistantCount >= thirdItem
+        && cheeseTrailerCount >= thirdItem && cheeseCatCount >= thirdItem && cheeseHippoCount >= thirdItem) {
         thirdItemAchievement.style.opacity = '1';
         thirdItemButton.removeAttribute('disabled');
         thirdItemButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseKnifeCount === fourthItem && cheeseGraterCount === fourthItem && cheeseCapsuleCount === fourthItem && cheeseDozerCount === fourthItem && cheeseAssistantCount === fourthItem
-        && cheeseTrailerCount === fourthItem && cheeseCatCount === fourthItem && cheeseHippoCount === fourthItem) {
+    if (cheeseKnifeCount >= fourthItem && cheeseGraterCount >= fourthItem && cheeseCapsuleCount >= fourthItem && cheeseDozerCount >= fourthItem && cheeseAssistantCount >= fourthItem
+        && cheeseTrailerCount >= fourthItem && cheeseCatCount >= fourthItem && cheeseHippoCount >= fourthItem) {
         fourthItemAchievement.style.opacity = '1';
         fourthItemButton.removeAttribute('disabled');
         fourthItemButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseKnifeCount === fifthItem && cheeseGraterCount === fifthItem && cheeseCapsuleCount === fifthItem && cheeseDozerCount === fifthItem && cheeseAssistantCount === fifthItem
-        && cheeseTrailerCount === fifthItem && cheeseCatCount === fifthItem && cheeseHippoCount === fifthItem) {
+    if (cheeseKnifeCount >= fifthItem && cheeseGraterCount >= fifthItem && cheeseCapsuleCount >= fifthItem && cheeseDozerCount >= fifthItem && cheeseAssistantCount >= fifthItem
+        && cheeseTrailerCount >= fifthItem && cheeseCatCount >= fifthItem && cheeseHippoCount >= fifthItem) {
         fifthItemAchievement.style.opacity = '1';
         fifthItemButton.removeAttribute('disabled');
         fifthItemButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseKnifeCount === sixthItem && cheeseGraterCount === sixthItem && cheeseCapsuleCount === sixthItem && cheeseDozerCount === sixthItem && cheeseAssistantCount === sixthItem
-        && cheeseTrailerCount === sixthItem && cheeseCatCount === sixthItem && cheeseHippoCount === sixthItem) {
+    if (cheeseKnifeCount >= sixthItem && cheeseGraterCount >= sixthItem && cheeseCapsuleCount >= sixthItem && cheeseDozerCount >= sixthItem && cheeseAssistantCount >= sixthItem
+        && cheeseTrailerCount >= sixthItem && cheeseCatCount >= sixthItem && cheeseHippoCount >= sixthItem) {
         sixthItemAchievement.style.opacity = '1';
         sixthItemButton.removeAttribute('disabled');
         sixthItemButton.style.backgroundColor = '#5cb85c';
@@ -864,5 +858,13 @@ const collectSixthItemAchievementPoints = () => {
     sixthItemButton.setAttribute('disabled', 'true');
     sixthItemButton.innerText = 'Collected';
     moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + sixthAllItemAchievementCollected).toString();
+}
+//#endregion
+
+//#region "GAME OVER"
+const endMoustronautMiners = () => {
+    if (achievementPoints === 150000) {
+        alert('Congratulations! You are the ultimate Moustronaut!')
+    }
 }
 //#endregion

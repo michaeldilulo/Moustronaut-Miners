@@ -162,14 +162,44 @@ let inventoryCheeseHippo = document.getElementById('cheeseHippoCount');
 // #endregion
 
 // #region DISABLED BUTTONS
-cheeseKnifeButton.setAttribute('disabled', 'true')
-cheeseGraterButton.setAttribute('disabled', 'true')
-cheeseCapsuleButton.setAttribute('disabled', 'true')
-cheeseDozerButton.setAttribute('disabled', 'true')
-cheeseAssistantButton.setAttribute('disabled', 'true')
-cheeseTrailerButton.setAttribute('disabled', 'true')
-cheeseCatButton.setAttribute('disabled', 'true')
-cheeseHippoButton.setAttribute('disabled', 'true')
+cheeseKnifeButton.setAttribute('disabled', 'true');
+cheeseGraterButton.setAttribute('disabled', 'true');
+cheeseCapsuleButton.setAttribute('disabled', 'true');
+cheeseDozerButton.setAttribute('disabled', 'true');
+cheeseAssistantButton.setAttribute('disabled', 'true');
+cheeseTrailerButton.setAttribute('disabled', 'true');
+cheeseCatButton.setAttribute('disabled', 'true');
+cheeseHippoButton.setAttribute('disabled', 'true');
+firstCheeseButton.setAttribute('disabled', 'true');
+secondCheeseButton.setAttribute('disabled', 'true');
+thirdCheeseButton.setAttribute('disabled', 'true');
+fourthCheeseButton.setAttribute('disabled', 'true');
+fifthCheeseButton.setAttribute('disabled', 'true');
+sixthCheeseButton.setAttribute('disabled', 'true');
+firstAssistantButton.setAttribute('disabled', 'true');
+secondAssistantButton.setAttribute('disabled', 'true');
+thirdAssistantButton.setAttribute('disabled', 'true');
+fourthAssistantButton.setAttribute('disabled', 'true');
+fifthAssistantButton.setAttribute('disabled', 'true');
+sixthAssistantButton.setAttribute('disabled', 'true');
+firstCatButton.setAttribute('disabled', 'true')
+secondCatButton.setAttribute('disabled', 'true')
+thirdCatButton.setAttribute('disabled', 'true')
+fourthCatButton.setAttribute('disabled', 'true')
+fifthCatButton.setAttribute('disabled', 'true')
+sixthCatButton.setAttribute('disabled', 'true')
+firstHippoButton.setAttribute('disabled', 'true')
+secondHippoButton.setAttribute('disabled', 'true')
+thirdHippoButton.setAttribute('disabled', 'true')
+fourthHippoButton.setAttribute('disabled', 'true')
+fifthHippoButton.setAttribute('disabled', 'true')
+sixthHippoButton.setAttribute('disabled', 'true')
+firstItemButton.setAttribute('disabled', 'true')
+secondItemButton.setAttribute('disabled', 'true')
+thirdItemButton.setAttribute('disabled', 'true')
+fourthItemButton.setAttribute('disabled', 'true')
+fifthItemButton.setAttribute('disabled', 'true')
+sixthItemButton.setAttribute('disabled', 'true')
 // #endregion
 
 // #region COLLECTING ACHIEVEMENTS DOM

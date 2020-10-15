@@ -47,6 +47,7 @@ let cheeseGraterPurchasePrice = document.getElementById('cheeseGraterPurchasePri
 let cheeseCapsulePurchasePrice = document.getElementById('cheeseCapsulePurchasePrice');
 let cheeseDozerPurchasePrice = document.getElementById('cheeseDozerPurchasePrice');
 let cheeseAssistantPurchasePrice = document.getElementById('cheeseAssistantPurchasePrice');
+let cheeseTrailerPurchasePrice = document.getElementById('cheeseTrailerPurchasePrice');
 // #endregion
 
 // #region INVENTORY DOM
@@ -214,9 +215,7 @@ const purchaseCheeseAssistant = () => {
 
 // #region CHEESE TRAILER
 const abilityCheeseTrailer = () => {
-    if (cheeseCollected < 1500) {
-        cheeseTrailerButton.setAttribute('disabled', 'true')
-    } else if (cheeseCollected >= 1500) {
+    if (cheeseCollected >= cheeseTrailerPurchased) {
         cheeseTrailerButton.style.backgroundColor = '#292b2c';
         cheeseTrailerButton.removeAttribute('disabled')
     }
@@ -227,6 +226,15 @@ const purchaseCheeseTrailer = () => {
     cheeseCollected - cheeseTrailerPurchased;
     inventoryCheeseTrailer.innerText = (cheeseTrailerCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseTrailerPurchased).toString();
+    if (cheeseCollected < cheeseTrailerPurchased) {
+        cheeseTrailerButton.setAttribute('disabled', 'true')
+        cheeseTrailerPurchased = cheeseTrailerPurchased + Math.floor(cheeseTrailerPurchased / 5) + cheeseTrailerCount;
+        cheeseTrailerPurchasePrice.innerText = (cheeseTrailerPurchased).toString();
+    }
+    setInterval(() => {
+        allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseTrailerCount + 8)).toString();
+        totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseTrailerCount + 8)).toString();
+    }, 3000)
 }
 // #endregion
 

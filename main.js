@@ -50,6 +50,25 @@ let thirdAssistant = 7;
 let fourthAssistant = 10;
 let fifthAssistant = 12;
 let sixthAssistant = 15;
+let firstCat = 1;
+let secondCat = 5;
+let thirdCat = 7;
+let fourthCat = 10;
+let fifthCat = 13;
+let sixthCat = 15;
+let firstHippo = 1;
+let secondHippo = 3;
+let thirdHippo = 5;
+let fourthHippo = 8;
+let fifthHippo = 10;
+let sixthHippo = 15;
+let firstItem = 1;
+let secondItem = 3;
+let thirdItem = 7;
+let fourthItem = 10;
+let fifthItem = 15;
+let sixthItem = 20;
+//#endregion
 
 
 // #region PURCHASE DATA

@@ -70,6 +70,10 @@ let fifthItem = 15;
 let sixthItem = 20;
 //#endregion
 
+//#region ACHIEVEMENT COLLECTED
+let firstCheeseAchievementCollectedText = document.getElementById('firstCheeseAchievementCollected');
+//#endregion
+
 // #region PURCHASE DATA
 let cheeseKnifePurchased = 25;
 let cheeseGraterPurchased = 75;
@@ -663,6 +667,45 @@ const allItemAchievementCollected = () => {
         sixthItemButton.removeAttribute('disabled');
         sixthItemButton.style.backgroundColor = '#5cb85c';
     }
+}
+
+//#endregion
+
+//#region ACHIEVEMENT AWARDED ON CLICK CHEESE
+const collectFirstCheeseAchievementPoints = () => {
+    firstCheeseButton.setAttribute('disabled', 'true');
+    firstCheeseButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + firstCheeseAchievementCollected).toString();
+}
+
+const collectSecondCheeseAchievementPoints = () => {
+    secondCheeseButton.setAttribute('disabled', 'true');
+    secondCheeseButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + secondCheeseAchievementCollected).toString();
+}
+
+const collectThirdCheeseAchievementPoints = () => {
+    thirdCheeseButton.setAttribute('disabled', 'true');
+    thirdCheeseButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + thirdCheeseAchievementCollected).toString();
+}
+
+const collectFourthCheeseAchievementPoints = () => {
+    fourthCheeseButton.setAttribute('disabled', 'true');
+    fourthCheeseButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fourthCheeseAchievementCollected).toString();
+}
+
+const collectFifthCheeseAchievementPoints = () => {
+    fifthCheeseButton.setAttribute('disabled', 'true');
+    fifthCheeseButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fifthCheeseAchievementCollected).toString();
+}
+
+const collectSixthCheeseAchievementPoints = () => {
+    sixthCheeseButton.setAttribute('disabled', 'true');
+    sixthCheeseButton.innerText = 'Collected';
+    moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + sixthCheeseAchievementCollected).toString();
 }
 
 //#endregion

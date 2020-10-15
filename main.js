@@ -101,12 +101,42 @@ let totalMineCheese = document.getElementById('cheeseMineTotal');
 // #region PURCHASE DOM
 let cheeseKnifeButton = document.getElementById('cheeseKnifeButton');
 let cheeseGraterButton = document.getElementById('cheeseGraterButton');
-let cheeseCapsuleButton = document.getElementById('cheeseCapsuleButton')
-let cheeseDozerButton = document.getElementById('cheeseDozerButton')
-let cheeseAssistantButton = document.getElementById('cheeseAssistantButton')
-let cheeseTrailerButton = document.getElementById('cheeseTrailerButton')
-let cheeseCatButton = document.getElementById('cheeseCatButton')
-let cheeseHippoButton = document.getElementById('cheeseHippoButton')
+let cheeseCapsuleButton = document.getElementById('cheeseCapsuleButton');
+let cheeseDozerButton = document.getElementById('cheeseDozerButton');
+let cheeseAssistantButton = document.getElementById('cheeseAssistantButton');
+let cheeseTrailerButton = document.getElementById('cheeseTrailerButton');
+let cheeseCatButton = document.getElementById('cheeseCatButton');
+let cheeseHippoButton = document.getElementById('cheeseHippoButton');
+let firstCheeseButton = document.getElementById('firstAchievementCheese');
+let secondCheeseButton = document.getElementById('secondAchievementCheese');
+let thirdCheeseButton = document.getElementById('thirdAchievementCheese');
+let fourthCheeseButton = document.getElementById('fourthAchievementCheese');
+let fifthCheeseButton = document.getElementById('fifthAchievementCheese');
+let sixthCheeseButton = document.getElementById('sixthAchievementCheese');
+let firstAssistantButton = document.getElementById('firstAchievementAssistant');
+let secondAssistantButton = document.getElementById('secondAchievementAssistant');
+let thirdAssistantButton = document.getElementById('thirdAchievementAssistant');
+let fourthAssistantButton = document.getElementById('fourthAchievementAssistant');
+let fifthAssistantButton = document.getElementById('fifthAchievementAssistant');
+let sixthAssistantButton = document.getElementById('sixthAchievementAssistant');
+let firstCatButton = document.getElementById('firstAchievementCat');
+let secondCatButton = document.getElementById('secondAchievementCat');
+let thirdCatButton = document.getElementById('thirdAchievementCat');
+let fourthCatButton = document.getElementById('fourthAchievementCat');
+let fifthCatButton = document.getElementById('fifthAchievementCat');
+let sixthCatButton = document.getElementById('sixthAchievementCat');
+let firstHippoButton = document.getElementById('firstAchievementHippo');
+let secondHippoButton = document.getElementById('secondAchievementHippo');
+let thirdHippoButton = document.getElementById('thirdAchievementHippo');
+let fourthHippoButton = document.getElementById('fourthAchievementHippo');
+let fifthHippoButton = document.getElementById('fifthAchievementHippo');
+let sixthHippoButton = document.getElementById('sixthAchievementHippo');
+let firstItemButton = document.getElementById('firstAchievementItem');
+let secondItemButton = document.getElementById('secondAchievementItem');
+let thirdItemButton = document.getElementById('thirdAchievementItem');
+let fourthItemButton = document.getElementById('fourthAchievementItem');
+let fifthItemButton = document.getElementById('fifthAchievementItem');
+let sixthItemButton = document.getElementById('sixthAchievementItem');
 // #endregion
 
 // #region CLICK UPGRADE PURCHASE PRICES
@@ -212,8 +242,6 @@ const mineCheese = () => {
         totalCheeseMine = totalCheeseMine + cheeseDozerCount + 7;
     }
 }
-
-
 
 // #region CHEESE KNIFE 
 const abilityCheeseKnife = () => {
@@ -546,3 +574,5 @@ const allItemAchievementCollected = () => {
         sixthItemAchievement.style.opacity = '1';
     }
 }
+
+//#endregion

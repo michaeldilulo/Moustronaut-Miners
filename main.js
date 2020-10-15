@@ -5,12 +5,36 @@ let totalCheeseMine = 0;
 
 // #region ACHIEVEMENT POINTS DATA
 let achievementPoints = 0;
-let firstCheeseAchievementCollected = 100;
-let secondCheeseAchievementCollected = 150;
-let thirdCheeseAchievementCollected = 225;
-let fourthCheeseAchievementCollected = 275;
-let fifthCheeseAchievementCollected = 350;
-let sixthCheeseAchievementCollected = 500;
+let firstCheeseAchievementCollected = 5000;
+let secondCheeseAchievementCollected = 7500;
+let thirdCheeseAchievementCollected = 10000;
+let fourthCheeseAchievementCollected = 15000;
+let fifthCheeseAchievementCollected = 22000;
+let sixthCheeseAchievementCollected = 50000;
+let firstAssistantAchievementCollected = 150;
+let secondAssistantAchievementCollected = 225;
+let thirdAssistantAchievementCollected = 275;
+let fourthAssistantAchievementCollected = 350;
+let fifthAssistantAchievementCollected = 500;
+let sixthAssistantAchievementCollected = 650;
+let firstCatAchievementCollected = 150;
+let secondCatAchievementCollected = 250;
+let thirdCatAchievementCollected = 400;
+let fourthCatAchievementCollected = 650;
+let fifthCatAchievementCollected = 700;
+let sixthCatAchievementCollected = 850;
+let firstHippoAchievementCollected = 350;
+let secondHippoAchievementCollected = 650;
+let thirdHippoAchievementCollected = 800;
+let fourthHippoAchievementCollected = 925;
+let fifthHippoAchievementCollected = 1050;
+let sixthHippoAchievementCollected = 1200;
+let firstAllItemAchievementCollected = 850;
+let secondAllItemAchievementCollected = 1200;
+let thirdAllItemAchievementCollected = 1350;
+let fourthAllItemAchievementCollected = 1500;
+let fifthAllItemAchievementCollected = 2250;
+let sixthAllItemAchievementCollected = 3000;
 //#endregion
 
 //#region COLLECTION ACHIEVEMENT TOTAL POINTS DATA
@@ -20,6 +44,13 @@ let thirdCheese = 75000;
 let fourthCheese = 100000;
 let fifthCheese = 150000;
 let sixthCheese = 250000;
+let firstAssistant = 1;
+let secondAssistant = 5;
+let thirdAssistant = 7;
+let fourthAssistant = 10;
+let fifthAssistant = 12;
+let sixthAssistant = 15;
+
 
 // #region PURCHASE DATA
 let cheeseKnifePurchased = 25;
@@ -100,6 +131,12 @@ let thirdCheeseAchievement = document.getElementById('thirdCheeseCollectedAchiev
 let fourthCheeseAchievement = document.getElementById('fourthCheeseCollectedAchievement');
 let fifthCheeseAchievement = document.getElementById('fifthCheeseCollectedAchievement');
 let sixthCheeseAchievement = document.getElementById('sixthCheeseCollectedAchievement');
+let firstAssistantAchievement = document.getElementById('firstAssistantCollectedAchievement');
+let secondAssistantAchievement = document.getElementById('secondAssistantCollectedAchievement');
+let thirdAssistantAchievement = document.getElementById('thirdAssistantCollectedAchievement');
+let fourthAssistantAchievement = document.getElementById('fourthAssistantCollectedAchievement');
+let fifthAssistantAchievement = document.getElementById('fifthAssistantCollectedAchievement');
+let sixthAssistantAchievement = document.getElementById('sixthAssistantCollectedAchievement');
 //#endregion
 
 
@@ -116,6 +153,8 @@ const mineCheese = () => {
     abilityCheeseTrailer();
     abilityCheeseCat();
     abilityCheeseHippo();
+    cheeseAchievementCompleted();
+    assistantAchievementCollected();
     if (cheeseKnifeCount >= 1) {
         cheeseCollected = cheeseCollected + cheeseKnifeCount + 2;
         totalCheeseMine = totalCheeseMine + cheeseKnifeCount + 2;
@@ -132,8 +171,9 @@ const mineCheese = () => {
         cheeseCollected = cheeseCollected + cheeseDozerCount + 7;
         totalCheeseMine = totalCheeseMine + cheeseDozerCount + 7;
     }
-    cheeseAchievementCompleted();
 }
+
+
 
 // #region CHEESE KNIFE 
 const abilityCheeseKnife = () => {
@@ -363,34 +403,55 @@ const buttonDisableFromPurchase = () => {
 // #region ACHIEVEMENT COMPLETED
 
 const cheeseAchievementCompleted = () => {
-    if (cheeseCollected === firstCheese) {
+    if (totalCheeseMine === firstCheese) {
         firstCheeseAchievement.style.opacity = '1';
-        // window.confirm('Congratulations! you collected 10 cheese way to go!')
-        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + firstCheeseAchievementCollected).toString();
     }
-    if (cheeseCollected === secondCheese) {
+    if (totalCheeseMine === secondCheese) {
         secondCheeseAchievement.style.opacity = '1';
-        // window.confirm('Congratulations! you collected 10 cheese way to go!')
-        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + secondCheeseAchievementCollected).toString();
     }
-    if (cheeseCollected === thirdCheese) {
+    if (totalCheeseMine === thirdCheese) {
         thirdCheeseAchievement.style.opacity = '1';
-        // window.confirm('Congratulations! you collected 10 cheese way to go!')
-        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + thirdCheeseAchievementCollected).toString();
     }
-    if (cheeseCollected === fourthCheese) {
+    if (totalCheeseMine === fourthCheese) {
         fourthCheeseAchievement.style.opacity = '1';
-        // window.confirm('Congratulations! you collected 10 cheese way to go!')
-        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fourthCheeseAchievementCollected).toString();
     }
-    if (cheeseCollected === fifthCheese) {
+    if (totalCheeseMine === fifthCheese) {
         fifthCheeseAchievement.style.opacity = '1';
-        // window.confirm('Congratulations! you collected 10 cheese way to go!')
-        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fifthCheeseAchievementCollected).toString();
     }
-    if (cheeseCollected === sixthCheese) {
+    if (totalCheeseMine === sixthCheese) {
         sixthCheeseAchievement.style.opacity = '1';
-        // window.confirm('Congratulations! you collected 10 cheese way to go!')
-        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + sixthCheeseAchievementCollected).toString();
     }
+}
+
+const assistantAchievementCollected = () => {
+    if (cheeseAssistantCount === firstAssistant) {
+        firstAssistantAchievement.style.opacity = '1';
+    }
+    if (cheeseAssistantCount === secondAssistant) {
+        secondAssistantAchievement.style.opacity = '1';
+    }
+    if (cheeseAssistantCount === thirdAssistant) {
+        thirdAssistantAchievement.style.opacity = '1';
+    }
+    if (cheeseAssistantCount === fourthAssistant) {
+        fourthAssistantAchievement.style.opacity = '1';
+    }
+    if (cheeseAssistantCount === fifthAssistant) {
+        fifthAssistantAchievement.style.opacity = '1';
+    }
+    if (cheeseAssistantCount === sixthAssistant) {
+        sixthAssistantAchievement.style.opacity = '1';
+    }
+}
+
+const catAchievementCollected = () => {
+
+}
+
+const hippoAchievementCollected = () => {
+
+}
+
+const allItemsAchievementCollected = () => {
+
 }

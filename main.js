@@ -70,7 +70,6 @@ let fifthItem = 15;
 let sixthItem = 20;
 //#endregion
 
-
 // #region PURCHASE DATA
 let cheeseKnifePurchased = 25;
 let cheeseGraterPurchased = 75;
@@ -156,6 +155,24 @@ let thirdAssistantAchievement = document.getElementById('thirdAssistantCollected
 let fourthAssistantAchievement = document.getElementById('fourthAssistantCollectedAchievement');
 let fifthAssistantAchievement = document.getElementById('fifthAssistantCollectedAchievement');
 let sixthAssistantAchievement = document.getElementById('sixthAssistantCollectedAchievement');
+let firstCatAchievement = document.getElementById('firstCatCollectedAchievement');
+let secondCatAchievement = document.getElementById('secondCatCollectedAchievement');
+let thirdCatAchievement = document.getElementById('thirdCatCollectedAchievement');
+let fourthCatAchievement = document.getElementById('fourthCatCollectedAchievement');
+let fifthCatAchievement = document.getElementById('fifthCatCollectedAchievement');
+let sixthCatAchievement = document.getElementById('sixthCatCollectedAchievement');
+let firstHippoAchievement = document.getElementById('firstHippoCollectedAchievement');
+let secondHippoAchievement = document.getElementById('secondHippoCollectedAchievement');
+let thirdHippoAchievement = document.getElementById('thirdHippoCollectedAchievement');
+let fourthHippoAchievement = document.getElementById('fourthHippoCollectedAchievement');
+let fifthHippoAchievement = document.getElementById('fifthHippoCollectedAchievement');
+let sixthHippoAchievement = document.getElementById('sixthHippoCollectedAchievement');
+let firstItemAchievement = document.getElementById('firstItemCollectedAchievement');
+let secondItemAchievement = document.getElementById('secondItemCollectedAchievement');
+let thirdItemAchievement = document.getElementById('thirdItemCollectedAchievement');
+let fourthItemAchievement = document.getElementById('fourthItemCollectedAchievement');
+let fifthItemAchievement = document.getElementById('fifthItemCollectedAchievement');
+let sixthItemAchievement = document.getElementById('sixthItemCollectedAchievement');
 //#endregion
 
 

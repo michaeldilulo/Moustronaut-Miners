@@ -49,6 +49,7 @@ let cheeseDozerPurchasePrice = document.getElementById('cheeseDozerPurchasePrice
 let cheeseAssistantPurchasePrice = document.getElementById('cheeseAssistantPurchasePrice');
 let cheeseTrailerPurchasePrice = document.getElementById('cheeseTrailerPurchasePrice');
 let cheeseCatPurchasePrice = document.getElementById('cheeseCatPurchasePrice');
+let cheeseHippoPurchasePrice = document.getElementById('cheeseHippoPurchasePrice');
 // #endregion
 
 // #region INVENTORY DOM
@@ -235,7 +236,7 @@ const purchaseCheeseTrailer = () => {
     setInterval(() => {
         allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseTrailerCount + 8)).toString();
         totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseTrailerCount + 8)).toString();
-    }, 3000)
+    }, 2000)
 }
 // #endregion
 
@@ -260,15 +261,13 @@ const purchaseCheeseCat = () => {
     setInterval(() => {
         allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseCatCount + 8)).toString();
         totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseCatCount + 8)).toString();
-    }, 3000)
+    }, 2000)
 }
 // #endregion
 
 // #region CHEESE HIPPO
 const abilityCheeseHippo = () => {
-    if (cheeseCollected < 3500) {
-        cheeseHippoButton.setAttribute('disabled', 'true')
-    } else if (cheeseCollected >= 3500) {
+    if (cheeseCollected >= cheeseHippoPurchased) {
         cheeseHippoButton.style.backgroundColor = '#292b2c';
         cheeseHippoButton.removeAttribute('disabled')
     }
@@ -279,5 +278,14 @@ const purchaseCheeseHippo = () => {
     cheeseCollected - cheeseHippoPurchased;
     inventoryCheeseHippo.innerText = (cheeseHippoCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseHippoPurchased).toString();
+    if (cheeseCollected < cheeseHippoPurchased) {
+        cheeseHippoButton.setAttribute('disabled', 'true')
+        cheeseHippoPurchased = cheeseHippoPurchased + Math.floor(cheeseHippoPurchased / 5) + cheeseHippoCount;
+        cheeseHippoPurchasePrice.innerText = (cheeseHippoPurchased).toString();
+    }
+    setInterval(() => {
+        allCheeseCollected.innerText = (cheeseCollected = cheeseCollected + (cheeseHippoCount + 10)).toString();
+        totalMineCheese.innerText = (totalCheeseMine = totalCheeseMine + (cheeseHippoCount + 10)).toString();
+    }, 1000)
 }
 // #endregion

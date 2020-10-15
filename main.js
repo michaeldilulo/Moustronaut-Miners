@@ -70,6 +70,7 @@ cheeseCatButton.setAttribute('disabled', 'true')
 cheeseHippoButton.setAttribute('disabled', 'true')
 // #endregion
 
+
 const mineCheese = () => {
     cheeseCollected++;
     totalCheeseMine++;
@@ -83,19 +84,21 @@ const mineCheese = () => {
     abilityCheeseTrailer();
     abilityCheeseCat();
     abilityCheeseHippo();
-    cheeseCollected = cheeseCollected + cheeseKnifeCount;
-    totalCheeseMine = totalCheeseMine + cheeseKnifeCount;
+    if (cheeseKnifeCount >= 1) {
+        cheeseCollected = cheeseCollected + cheeseKnifeCount + 1;
+        totalCheeseMine = totalCheeseMine + cheeseKnifeCount + 1;
+    }
     if (cheeseGraterCount >= 1) {
-        cheeseCollected = cheeseCollected + cheeseGraterCount + 1;
-        totalCheeseMine = totalCheeseMine + cheeseGraterCount + 1;
+        cheeseCollected = cheeseCollected + cheeseGraterCount + 2;
+        totalCheeseMine = totalCheeseMine + cheeseGraterCount + 2;
     }
     if (cheeseCapsuleCount >= 1) {
-        cheeseCollected = cheeseCollected + cheeseCapsuleCount + 2;
-        totalCheeseMine = totalCheeseMine + cheeseCapsuleCount + 2;
+        cheeseCollected = cheeseCollected + cheeseCapsuleCount + 3;
+        totalCheeseMine = totalCheeseMine + cheeseCapsuleCount + 3;
     }
     if (cheeseDozerCount >= 1) {
-        cheeseCollected = cheeseCollected + cheeseDozerCount + 3;
-        totalCheeseMine = totalCheeseMine + cheeseDozerCount + 3;
+        cheeseCollected = cheeseCollected + cheeseDozerCount + 5;
+        totalCheeseMine = totalCheeseMine + cheeseDozerCount + 5;
     }
 }
 
@@ -164,9 +167,7 @@ const purchaseCheeseCapsule = () => {
 
 // #region CHEESE DOZER
 const abilityCheeseDozer = () => {
-    if (cheeseCollected < 550) {
-        cheeseDozerButton.setAttribute('disabled', 'true')
-    } else if (cheeseCollected >= 550) {
+    if (cheeseCollected >= cheeseDozerPurchased) {
         cheeseDozerButton.style.backgroundColor = '#292b2c';
         cheeseDozerButton.removeAttribute('disabled')
     }
@@ -177,6 +178,11 @@ const purchaseCheeseDozer = () => {
     cheeseCollected - cheeseDozerPurchased;
     inventoryCheeseDozer.innerText = (cheeseDozerCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseDozerPurchased).toString();
+    if (cheeseCollected < cheeseDozerPurchased) {
+        cheeseDozerButton.setAttribute('disabled', 'true')
+        cheeseDozerPurchased = cheeseDozerPurchased + Math.floor(cheeseDozerPurchased / 5) + cheeseDozerCount;
+        cheeseDozerPurchasePrice.innerText = (cheeseDozerPurchased).toString();
+    }
 }
 // #endregion
 

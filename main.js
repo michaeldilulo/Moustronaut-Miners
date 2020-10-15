@@ -41,6 +41,10 @@ let cheeseCatButton = document.getElementById('cheeseCatButton')
 let cheeseHippoButton = document.getElementById('cheeseHippoButton')
 // #endregion
 
+// #region PURCHASE PRICES
+let cheeseKnifePurchasePrice = document.getElementById('cheeseKnifePurchasePrice');
+// #endregion
+
 // #region INVENTORY DOM
 let inventoryCheeseKnife = document.getElementById('cheeseKnifeCount');
 let inventoryCheeseGrater = document.getElementById('cheeseGraterCount');
@@ -64,27 +68,37 @@ cheeseHippoButton.setAttribute('disabled', 'true')
 // #endregion
 
 const mineCheese = () => {
-    setInterval(() => {
-        cheeseCollected++;
-        totalCheeseMine++;
-        allCheeseCollected.innerText = (cheeseCollected).toString();
-        totalMineCheese.innerText = (totalCheeseMine).toString();
-        abilityCheeseKnife();
-        abilityCheeseGrater();
-        abilityCheeseCapsule();
-        abilityCheeseDozer();
-        abilityCheeseAssistant();
-        abilityCheeseTrailer();
-        abilityCheeseCat();
-        abilityCheeseHippo();
-    }, 1000);
+    cheeseCollected++;
+    totalCheeseMine++;
+    allCheeseCollected.innerText = (cheeseCollected).toString();
+    totalMineCheese.innerText = (totalCheeseMine).toString();
+    abilityCheeseKnife();
+    abilityCheeseGrater();
+    abilityCheeseCapsule();
+    abilityCheeseDozer();
+    abilityCheeseAssistant();
+    abilityCheeseTrailer();
+    abilityCheeseCat();
+    abilityCheeseHippo();
+    cheeseCollected = cheeseCollected + cheeseKnifeCount;
+    totalCheeseMine = totalCheeseMine + cheeseKnifeCount;
+    if (cheeseGraterCount >= 1) {
+        cheeseCollected = cheeseCollected + cheeseGraterCount + 1;
+        totalCheeseMine = totalCheeseMine + cheeseGraterCount + 1;
+    }
+    if (cheeseCapsuleCount >= 1) {
+        cheeseCollected = cheeseCollected + cheeseCapsuleCount + 2;
+        totalCheeseMine = totalCheeseMine + cheeseCapsuleCount + 2;
+    }
+    if (cheeseDozerCount >= 1) {
+        cheeseCollected = cheeseCollected + cheeseDozerCount + 3;
+        totalCheeseMine = totalCheeseMine + cheeseDozerCount + 3;
+    }
 }
 
 // #region CHEESE KNIFE 
 const abilityCheeseKnife = () => {
-    if (cheeseCollected < 25) {
-        cheeseKnifeButton.setAttribute('disabled', 'true')
-    } else if (cheeseCollected >= 25) {
+    if (cheeseCollected >= cheeseKnifePurchased) {
         cheeseKnifeButton.style.backgroundColor = '#292b2c';
         cheeseKnifeButton.removeAttribute('disabled')
     }
@@ -95,6 +109,11 @@ const purchaseCheeseKnife = () => {
     cheeseCollected - cheeseKnifePurchased;
     inventoryCheeseKnife.innerText = (cheeseKnifeCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseKnifePurchased).toString();
+    if (cheeseCollected < cheeseKnifePurchased) {
+        cheeseKnifeButton.setAttribute('disabled', 'true')
+        cheeseKnifePurchased = cheeseKnifePurchased + Math.floor(cheeseKnifePurchased / 5) + cheeseKnifeCount;
+        cheeseKnifePurchasePrice.innerText = (cheeseKnifePurchased).toString();
+    }
 }
 // #endregion
 

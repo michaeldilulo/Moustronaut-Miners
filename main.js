@@ -143,9 +143,7 @@ const purchaseCheeseGrater = () => {
 
 // #region CHEESE CAPSULE
 const abilityCheeseCapsule = () => {
-    if (cheeseCollected < 250) {
-        cheeseCapsuleButton.setAttribute('disabled', 'true')
-    } else if (cheeseCollected >= 250) {
+    if (cheeseCollected >= cheeseCapsulePurchased) {
         cheeseCapsuleButton.style.backgroundColor = '#292b2c';
         cheeseCapsuleButton.removeAttribute('disabled')
     }
@@ -156,6 +154,11 @@ const purchaseCheeseCapsule = () => {
     cheeseCollected - cheeseCapsulePurchased;
     inventoryCheeseCapsule.innerText = (cheeseCapsuleCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseCapsulePurchased).toString();
+    if (cheeseCollected < cheeseCapsulePurchased) {
+        cheeseCapsuleButton.setAttribute('disabled', 'true')
+        cheeseCapsulePurchased = cheeseCapsulePurchased + Math.floor(cheeseCapsulePurchased / 5) + cheeseCapsuleCount;
+        cheeseCapsulePurchasePrice.innerText = (cheeseCapsulePurchased).toString();
+    }
 }
 // #endregion
 

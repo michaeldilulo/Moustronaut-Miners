@@ -72,6 +72,7 @@ h1 {
 
 .card {
     width: 14rem;
+    opacity: 0.4;
 }
 
 .cheese-achievement {

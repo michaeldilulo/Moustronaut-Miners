@@ -3,6 +3,24 @@ let cheeseCollected = 0;
 let totalCheeseMine = 0;
 // #endregion
 
+// #region ACHIEVEMENT POINTS DATA
+let achievementPoints = 0;
+let firstCheeseAchievementCollected = 100;
+let secondCheeseAchievementCollected = 150;
+let thirdCheeseAchievementCollected = 225;
+let fourthCheeseAchievementCollected = 275;
+let fifthCheeseAchievementCollected = 350;
+let sixthCheeseAchievementCollected = 500;
+//#endregion
+
+//#region COLLECTION ACHIEVEMENT TOTAL POINTS DATA
+let firstCheese = 25000;
+let secondCheese = 50000;
+let thirdCheese = 75000;
+let fourthCheese = 100000;
+let fifthCheese = 150000;
+let sixthCheese = 250000;
+
 // #region PURCHASE DATA
 let cheeseKnifePurchased = 25;
 let cheeseGraterPurchased = 75;
@@ -74,6 +92,16 @@ cheeseCatButton.setAttribute('disabled', 'true')
 cheeseHippoButton.setAttribute('disabled', 'true')
 // #endregion
 
+// #region COLLECTING ACHIEVEMENTS DOM
+let moustronautAchievementPoints = document.getElementById('moustronautTotalAchievementPoints');
+let firstCheeseAchievement = document.getElementById('firstCheeseCollectedAchievement');
+let secondCheeseAchievement = document.getElementById('secondCheeseCollectedAchievement');
+let thirdCheeseAchievement = document.getElementById('thirdCheeseCollectedAchievement');
+let fourthCheeseAchievement = document.getElementById('fourthCheeseCollectedAchievement');
+let fifthCheeseAchievement = document.getElementById('fifthCheeseCollectedAchievement');
+let sixthCheeseAchievement = document.getElementById('sixthCheeseCollectedAchievement');
+//#endregion
+
 
 const mineCheese = () => {
     cheeseCollected++;
@@ -104,7 +132,7 @@ const mineCheese = () => {
         cheeseCollected = cheeseCollected + cheeseDozerCount + 7;
         totalCheeseMine = totalCheeseMine + cheeseDozerCount + 7;
     }
-
+    cheeseAchievementCompleted();
 }
 
 // #region CHEESE KNIFE 
@@ -331,3 +359,38 @@ const buttonDisableFromPurchase = () => {
     }
 }
 // #endregion
+
+// #region ACHIEVEMENT COMPLETED
+
+const cheeseAchievementCompleted = () => {
+    if (cheeseCollected === firstCheese) {
+        firstCheeseAchievement.style.opacity = '1';
+        // window.confirm('Congratulations! you collected 10 cheese way to go!')
+        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + firstCheeseAchievementCollected).toString();
+    }
+    if (cheeseCollected === secondCheese) {
+        secondCheeseAchievement.style.opacity = '1';
+        // window.confirm('Congratulations! you collected 10 cheese way to go!')
+        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + secondCheeseAchievementCollected).toString();
+    }
+    if (cheeseCollected === thirdCheese) {
+        thirdCheeseAchievement.style.opacity = '1';
+        // window.confirm('Congratulations! you collected 10 cheese way to go!')
+        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + thirdCheeseAchievementCollected).toString();
+    }
+    if (cheeseCollected === fourthCheese) {
+        fourthCheeseAchievement.style.opacity = '1';
+        // window.confirm('Congratulations! you collected 10 cheese way to go!')
+        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fourthCheeseAchievementCollected).toString();
+    }
+    if (cheeseCollected === fifthCheese) {
+        fifthCheeseAchievement.style.opacity = '1';
+        // window.confirm('Congratulations! you collected 10 cheese way to go!')
+        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + fifthCheeseAchievementCollected).toString();
+    }
+    if (cheeseCollected === sixthCheese) {
+        sixthCheeseAchievement.style.opacity = '1';
+        // window.confirm('Congratulations! you collected 10 cheese way to go!')
+        moustronautAchievementPoints.innerText = (achievementPoints = achievementPoints + sixthCheeseAchievementCollected).toString();
+    }
+}

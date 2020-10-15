@@ -503,111 +503,165 @@ const buttonDisableFromPurchase = () => {
 const cheeseAchievementCompleted = () => {
     if (totalCheeseMine === firstCheese) {
         firstCheeseAchievement.style.opacity = '1';
-        firstCheeseButton.removeAttribute('disabled')
+        firstCheeseButton.removeAttribute('disabled');
+        firstCheeseButton.style.backgroundColor = '#5cb85c';
     }
     if (totalCheeseMine === secondCheese) {
         secondCheeseAchievement.style.opacity = '1';
-        secondCheeseButton.removeAttribute('disabled')
+        secondCheeseButton.removeAttribute('disabled');
+        secondCheeseButton.style.backgroundColor = '#5cb85c';
     }
     if (totalCheeseMine === thirdCheese) {
         thirdCheeseAchievement.style.opacity = '1';
-        thirdCheeseButton.removeAttribute('disabled')
+        thirdCheeseButton.removeAttribute('disabled');
+        thirdCheeseButton.style.backgroundColor = '#5cb85c';
     }
     if (totalCheeseMine === fourthCheese) {
         fourthCheeseAchievement.style.opacity = '1';
-        fourthCheeseButton.removeAttribute('disabled')
+        fourthCheeseButton.removeAttribute('disabled');
+        fourthCheeseButton.style.backgroundColor = '#5cb85c';
     }
     if (totalCheeseMine === fifthCheese) {
         fifthCheeseAchievement.style.opacity = '1';
-        fifthCheeseButton.removeAttribute('disabled')
+        fifthCheeseButton.removeAttribute('disabled');
+        fifthCheeseButton.style.backgroundColor = '#5cb85c';
     }
     if (totalCheeseMine === sixthCheese) {
         sixthCheeseAchievement.style.opacity = '1';
-        sixthCheeseButton.removeAttribute('disabled')
+        sixthCheeseButton.removeAttribute('disabled');
+        sixthCheeseButton.style.backgroundColor = '#5cb85c';
     }
 }
 
 const assistantAchievementCollected = () => {
     if (cheeseAssistantCount === firstAssistant) {
         firstAssistantAchievement.style.opacity = '1';
+        firstAssistantButton.removeAttribute('disabled');
+        firstAssistantButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseAssistantCount === secondAssistant) {
         secondAssistantAchievement.style.opacity = '1';
+        secondAssistantButton.removeAttribute('disabled');
+        secondAssistantButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseAssistantCount === thirdAssistant) {
         thirdAssistantAchievement.style.opacity = '1';
+        thirdAssistantButton.removeAttribute('disabled');
+        thirdAssistantButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseAssistantCount === fourthAssistant) {
         fourthAssistantAchievement.style.opacity = '1';
+        fourthAssistantButton.removeAttribute('disabled');
+        fourthAssistantButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseAssistantCount === fifthAssistant) {
         fifthAssistantAchievement.style.opacity = '1';
+        fifthAssistantButton.removeAttribute('disabled');
+        fifthAssistantButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseAssistantCount === sixthAssistant) {
         sixthAssistantAchievement.style.opacity = '1';
+        sixthAssistantButton.removeAttribute('disabled');
+        sixthAssistantButton.style.backgroundColor = '#5cb85c';
     }
 }
 
 const catAchievementCollected = () => {
     if (cheeseCatCount === firstCat) {
         firstCatAchievement.style.opacity = '1';
+        firstCatButton.removeAttribute('disabled');
+        firstCatButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseCatCount === secondCat) {
         secondCatAchievement.style.opacity = '1';
+        secondCatButton.removeAttribute('disabled');
+        secondCatButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseCatCount === thirdCat) {
         thirdCatAchievement.style.opacity = '1';
+        thirdCatButton.removeAttribute('disabled');
+        thirdCatButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseCatCount === fourthCat) {
         fourthCatAchievement.style.opacity = '1';
+        fourthCatButton.removeAttribute('disabled');
+        fourthCatButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseCatCount === fifthCat) {
         fifthCatAchievement.style.opacity = '1';
+        fifthCatButton.removeAttribute('disabled');
+        fifthCatButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseCatCount === sixthCat) {
         sixthCatAchievement.style.opacity = '1';
+        sixthCatButton.removeAttribute('disabled');
+        sixthCatButton.style.backgroundColor = '#5cb85c';
     }
 }
 
 const hippoAchievementCollected = () => {
     if (cheeseHippoCount === firstHippo) {
         firstHippoAchievement.style.opacity = '1';
+        firstHippoButton.removeAttribute('disabled');
+        firstHippoButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseHippoCount === secondHippo) {
         secondHippoAchievement.style.opacity = '1';
+        secondHippoButton.removeAttribute('disabled');
+        secondHippoButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseHippoCount === thirdHippo) {
         thirdHippoAchievement.style.opacity = '1';
+        thirdHippoButton.removeAttribute('disabled');
+        thirdHippoButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseHippoCount === fourthHippo) {
         fourthHippoAchievement.style.opacity = '1';
+        fourthHippoButton.removeAttribute('disabled');
+        fourthHippoButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseHippoCount === fifthHippo) {
         fifthHippoAchievement.style.opacity = '1';
+        fifthHippoButton.removeAttribute('disabled');
+        fifthHippoButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseHippoCount === sixthHippo) {
         sixthHippoAchievement.style.opacity = '1';
+        sixthHippoButton.removeAttribute('disabled');
+        sixthHippoButton.style.backgroundColor = '#5cb85c';
     }
 }
 
 const allItemAchievementCollected = () => {
     if (cheeseItemCount === firstItem) {
         firstItemAchievement.style.opacity = '1';
+        firstItemButton.removeAttribute('disabled');
+        firstItemButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseItemCount === secondItem) {
         secondItemAchievement.style.opacity = '1';
+        secondItemButton.removeAttribute('disabled');
+        secondItemButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseItemCount === thirdItem) {
         thirdItemAchievement.style.opacity = '1';
+        thirdItemButton.removeAttribute('disabled');
+        thirdItemButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseItemCount === fourthItem) {
         fourthItemAchievement.style.opacity = '1';
+        fourthItemButton.removeAttribute('disabled');
+        fourthItemButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseItemCount === fifthItem) {
         fifthItemAchievement.style.opacity = '1';
+        fifthItemButton.removeAttribute('disabled');
+        fifthItemButton.style.backgroundColor = '#5cb85c';
     }
     if (cheeseItemCount === sixthItem) {
         sixthItemAchievement.style.opacity = '1';
+        sixthItemButton.removeAttribute('disabled');
+        sixthItemButton.style.backgroundColor = '#5cb85c';
     }
 }
 

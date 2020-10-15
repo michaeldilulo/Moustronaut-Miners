@@ -637,32 +637,38 @@ const hippoAchievementCollected = () => {
 }
 
 const allItemAchievementCollected = () => {
-    if (cheeseItemCount === firstItem) {
+    if (cheeseKnifeCount === firstItem && cheeseGraterCount === firstItem && cheeseCapsuleCount === firstItem && cheeseDozerCount === firstItem && cheeseAssistantCount === firstItem
+        && cheeseTrailerCount === firstItem && cheeseCatCount === firstItem && cheeseHippoCount === firstItem) {
         firstItemAchievement.style.opacity = '1';
         firstItemButton.removeAttribute('disabled');
         firstItemButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseItemCount === secondItem) {
+    if (cheeseKnifeCount === secondItem && cheeseGraterCount === secondItem && cheeseCapsuleCount === secondItem && cheeseDozerCount === secondItem && cheeseAssistantCount === secondItem
+        && cheeseTrailerCount === secondItem && cheeseCatCount === secondItem && cheeseHippoCount === secondItem) {
         secondItemAchievement.style.opacity = '1';
         secondItemButton.removeAttribute('disabled');
         secondItemButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseItemCount === thirdItem) {
+    if (cheeseKnifeCount === thirdItem && cheeseGraterCount === thirdItem && cheeseCapsuleCount === thirdItem && cheeseDozerCount === thirdItem && cheeseAssistantCount === thirdItem
+        && cheeseTrailerCount === thirdItem && cheeseCatCount === thirdItem && cheeseHippoCount === thirdItem) {
         thirdItemAchievement.style.opacity = '1';
         thirdItemButton.removeAttribute('disabled');
         thirdItemButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseItemCount === fourthItem) {
+    if (cheeseKnifeCount === fourthItem && cheeseGraterCount === fourthItem && cheeseCapsuleCount === fourthItem && cheeseDozerCount === fourthItem && cheeseAssistantCount === fourthItem
+        && cheeseTrailerCount === fourthItem && cheeseCatCount === fourthItem && cheeseHippoCount === fourthItem) {
         fourthItemAchievement.style.opacity = '1';
         fourthItemButton.removeAttribute('disabled');
         fourthItemButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseItemCount === fifthItem) {
+    if (cheeseKnifeCount === fifthItem && cheeseGraterCount === fifthItem && cheeseCapsuleCount === fifthItem && cheeseDozerCount === fifthItem && cheeseAssistantCount === fifthItem
+        && cheeseTrailerCount === fifthItem && cheeseCatCount === fifthItem && cheeseHippoCount === fifthItem) {
         fifthItemAchievement.style.opacity = '1';
         fifthItemButton.removeAttribute('disabled');
         fifthItemButton.style.backgroundColor = '#5cb85c';
     }
-    if (cheeseItemCount === sixthItem) {
+    if (cheeseKnifeCount === sixthItem && cheeseGraterCount === sixthItem && cheeseCapsuleCount === sixthItem && cheeseDozerCount === sixthItem && cheeseAssistantCount === sixthItem
+        && cheeseTrailerCount === sixthItem && cheeseCatCount === sixthItem && cheeseHippoCount === sixthItem) {
         sixthItemAchievement.style.opacity = '1';
         sixthItemButton.removeAttribute('disabled');
         sixthItemButton.style.backgroundColor = '#5cb85c';

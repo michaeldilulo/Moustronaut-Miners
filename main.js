@@ -90,6 +90,7 @@ let cheeseAssistantCount = 0;
 let cheeseTrailerCount = 0;
 let cheeseCatCount = 0;
 let cheeseHippoCount = 0;
+let cheeseItemCount = 0;
 // #endregion
 
 // #region CHEESE DOM
@@ -191,6 +192,9 @@ const mineCheese = () => {
     abilityCheeseHippo();
     cheeseAchievementCompleted();
     assistantAchievementCollected();
+    catAchievementCollected();
+    hippoAchievementCollected();
+    allItemAchievementCollected();
     if (cheeseKnifeCount >= 1) {
         cheeseCollected = cheeseCollected + cheeseKnifeCount + 2;
         totalCheeseMine = totalCheeseMine + cheeseKnifeCount + 2;
@@ -481,13 +485,64 @@ const assistantAchievementCollected = () => {
 }
 
 const catAchievementCollected = () => {
-
+    if (cheeseCatCount === firstCat) {
+        firstCatAchievement.style.opacity = '1';
+    }
+    if (cheeseCatCount === secondCat) {
+        secondCatAchievement.style.opacity = '1';
+    }
+    if (cheeseCatCount === thirdCat) {
+        thirdCatAchievement.style.opacity = '1';
+    }
+    if (cheeseCatCount === fourthCat) {
+        fourthCatAchievement.style.opacity = '1';
+    }
+    if (cheeseCatCount === fifthCat) {
+        fifthCatAchievement.style.opacity = '1';
+    }
+    if (cheeseCatCount === sixthCat) {
+        sixthCatAchievement.style.opacity = '1';
+    }
 }
 
 const hippoAchievementCollected = () => {
-
+    if (cheeseHippoCount === firstHippo) {
+        firstHippoAchievement.style.opacity = '1';
+    }
+    if (cheeseHippoCount === secondHippo) {
+        secondHippoAchievement.style.opacity = '1';
+    }
+    if (cheeseHippoCount === thirdHippo) {
+        thirdHippoAchievement.style.opacity = '1';
+    }
+    if (cheeseHippoCount === fourthHippo) {
+        fourthHippoAchievement.style.opacity = '1';
+    }
+    if (cheeseHippoCount === fifthHippo) {
+        fifthHippoAchievement.style.opacity = '1';
+    }
+    if (cheeseHippoCount === sixthHippo) {
+        sixthHippoAchievement.style.opacity = '1';
+    }
 }
 
-const allItemsAchievementCollected = () => {
-
+const allItemAchievementCollected = () => {
+    if (cheeseItemCount === firstItem) {
+        firstItemAchievement.style.opacity = '1';
+    }
+    if (cheeseItemCount === secondItem) {
+        secondItemAchievement.style.opacity = '1';
+    }
+    if (cheeseItemCount === thirdItem) {
+        thirdItemAchievement.style.opacity = '1';
+    }
+    if (cheeseItemCount === fourthItem) {
+        fourthItemAchievement.style.opacity = '1';
+    }
+    if (cheeseItemCount === fifthItem) {
+        fifthItemAchievement.style.opacity = '1';
+    }
+    if (cheeseItemCount === sixthItem) {
+        sixthItemAchievement.style.opacity = '1';
+    }
 }

@@ -41,8 +41,11 @@ let cheeseCatButton = document.getElementById('cheeseCatButton')
 let cheeseHippoButton = document.getElementById('cheeseHippoButton')
 // #endregion
 
-// #region PURCHASE PRICES
+// #region CLICK UPGRADE PURCHASE PRICES
 let cheeseKnifePurchasePrice = document.getElementById('cheeseKnifePurchasePrice');
+let cheeseGraterPurchasePrice = document.getElementById('cheeseGraterPurchasePrice');
+let cheeseCapsulePurchasePrice = document.getElementById('cheeseCapsulePurchasePrice');
+let cheeseDozerPurchasePrice = document.getElementById('cheeseDozerPurchasePrice');
 // #endregion
 
 // #region INVENTORY DOM
@@ -119,9 +122,7 @@ const purchaseCheeseKnife = () => {
 
 // #region CHEESE GRATER
 const abilityCheeseGrater = () => {
-    if (cheeseCollected < 75) {
-        cheeseGraterButton.setAttribute('disabled', 'true')
-    } else if (cheeseCollected >= 75) {
+    if (cheeseCollected >= cheeseGraterPurchased) {
         cheeseGraterButton.style.backgroundColor = '#292b2c';
         cheeseGraterButton.removeAttribute('disabled')
     }
@@ -132,6 +133,11 @@ const purchaseCheeseGrater = () => {
     cheeseCollected - cheeseGraterPurchased;
     inventoryCheeseGrater.innerText = (cheeseGraterCount).toString();
     allCheeseCollected.innerText = (cheeseCollected = cheeseCollected - cheeseGraterPurchased).toString();
+    if (cheeseCollected < cheeseGraterPurchased) {
+        cheeseGraterButton.setAttribute('disabled', 'true')
+        cheeseGraterPurchased = cheeseGraterPurchased + Math.floor(cheeseGraterPurchased / 5) + cheeseGraterCount;
+        cheeseGraterPurchasePrice.innerText = (cheeseGraterPurchased).toString();
+    }
 }
 // #endregion
 
